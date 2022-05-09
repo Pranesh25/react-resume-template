@@ -6,13 +6,17 @@ phases:
       nodejs: 10
       
   pre_build:
+  on-failure: ABORT
     commands:
       - npm install
+      
   build:
+  on-failure: ABORT
     commands:
       - npm run build
       
   post_build:
+  on-failure: ABORT
    commands:
      - aws cloudfront create-invalidation --distribution-id "E8GATBMIP5SQE" --paths "/*"
     
