@@ -6,14 +6,14 @@ phases:
       nodejs: 10
       
   pre_build:
-  on-failure: ABORT
     commands:
       - npm install
+  on-failure: ABORT
       
   build:
-  on-failure: ABORT
     commands:
       - npm run build
+  on-failure: ABORT
       
   post_build:
    commands:
