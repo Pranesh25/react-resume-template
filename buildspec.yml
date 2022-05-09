@@ -8,12 +8,12 @@ phases:
   pre_build:
     commands:
       - npm install
-  on-failure: ABORT
+    on-failure: ABORT
       
   build:
     commands:
       - npm run build
-  on-failure: ABORT
+    on-failure: ABORT
       
   post_build:
    commands:
